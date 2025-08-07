@@ -4,11 +4,11 @@
         <title>정보허브</title>
         <description>생활에 도움되는 다양한 정보를 쉽고 이해하기 쉽게 정리하여 제공하는 정보성 블로그입니다.</description>
         <link>https://khunslab.github.io</link>
-        <atom:link href="https://khunslab.github.io/feed" rel="self" type="application/rss+xml" />
+        <atom:link href="https://khunslab.github.io/rss.xml" rel="self" type="application/rss+xml" />
         <language>ko-KR</language>
         <managingEditor>imkyounghun77@gmail.com (정보허브)</managingEditor>
         <webMaster>imkyounghun77@gmail.com (정보허브)</webMaster>
-        <lastBuildDate>Wed, 07 Aug 2025 00:00:00 +0900</lastBuildDate>
+        <lastBuildDate>Thu, 07 Aug 2025 15:30:00 +0900</lastBuildDate>
         <pubDate>Wed, 07 Aug 2025 00:00:00 +0900</pubDate>
         <copyright>Copyright 2025 정보허브. All rights reserved.</copyright>
         <category>생활정보</category>
@@ -16,6 +16,15 @@
         <docs>https://www.rssboard.org/rss-specification</docs>
         <ttl>1440</ttl>
         
+        <item>
+            <title>민생회복지원금 사용처 완벽 가이드</title>
+            <description>편의점, 마트, 병원, 학원비까지 민생소비쿠폰을 현명하게 활용하는 방법과 토스, 카카오뱅크, 네이버페이별 사용법 총정리</description>
+            <link>https://khunslab.github.io/posts/welfare-support-fund-usage.html</link>
+            <guid>https://khunslab.github.io/posts/welfare-support-fund-usage.html</guid>
+            <pubDate>Thu, 07 Aug 2025 15:30:00 +0900</pubDate>
+            <category>생활정보</category>
+            <author>imkyounghun77@gmail.com (정보허브)</author>
+        </item>
         <item>
             <title>근로장려금 신청 가이드</title>
             <description>근로장려금은 저소득 근로자가 근로를 지속할 수 있도록 돕는 국가 지원 제도입니다. 신청 자격부터 지급액 계산까지 한눈에 확인해보세요.</description>
