@@ -103,7 +103,7 @@
             position: relative;
         }
         
-        .nav-links a:hover {
+        .nav-links a:hover, .nav-links a.active {
             color: #3498db;
         }
         
@@ -119,8 +119,77 @@
             transform: translateX(-50%);
         }
         
-        .nav-links a:hover::after {
+        .nav-links a:hover::after, .nav-links a.active::after {
             width: 100%;
+        }
+        
+        /* 모바일 햄버거 메뉴 */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #555;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background: #f8f9fa;
+            color: #3498db;
         }
         
         /* Hero Section */
@@ -700,12 +769,17 @@
                 gap: 1.5rem;
             }
             
+            /* 모바일 네비게이션 */
             .nav-links {
-                gap: 1rem;
+                display: none;
             }
             
-            .nav-links a {
-                font-size: 0.9rem;
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
             }
         }
         
@@ -718,9 +792,8 @@
                 font-size: 1.8rem;
             }
             
-            nav {
-                flex-direction: column;
-                gap: 1rem;
+            .logo {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -730,13 +803,31 @@
     <header>
         <nav class="container">
             <a href="/" class="logo">📚 정보허브</a>
+            
+            <!-- 데스크톱 메뉴 -->
             <ul class="nav-links">
-                <li><a href="/">홈</a></li>
-                <li><a href="/categories/">카테고리</a></li>
-                <li><a href="/about/">소개</a></li>
-                <li><a href="/contact/">연락처</a></li>
-                <li><a href="/privacy/">개인정보처리방침</a></li>
+                <li><a href="/" class="active">홈</a></li>
+                <li><a href="/about.html">소개</a></li>
+                <li><a href="/contact.html">연락처</a></li>
+                <li><a href="/privacy.html">개인정보처리방침</a></li>
             </ul>
+            
+            <!-- 모바일 햄버거 버튼 -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- 모바일 메뉴 -->
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="/" class="active">🏠 홈</a></li>
+                    <li><a href="/about.html">📖 소개</a></li>
+                    <li><a href="/contact.html">📞 연락처</a></li>
+                    <li><a href="/privacy.html">🔒 개인정보처리방침</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
