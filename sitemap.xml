@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- 메인 페이지 -->
-    <url>
-        <loc>https://khunslab.github.io/</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <!-- 소개 페이지 -->
-    <url>
-        <loc>https://khunslab.github.io/about.html</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- 연락처 페이지 -->
-    <url>
-        <loc>https://khunslab.github.io/contact.html</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- 개인정보처리방침 -->
-    <url>
-        <loc>https://khunslab.github.io/privacy.html</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <!-- 이용약관 -->
-    <url>
-        <loc>https://khunslab.github.io/terms.html</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <!-- 근로장려금 신청 가이드 -->
-    <url>
-        <loc>https://khunslab.github.io/posts/work-incentive-guide.html</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://khunslab.github.io/posts/welfare-support-fund-usage.html</loc>
-        <lastmod>2025-08-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+   
+   <!-- 메인 페이지 -->
+   <url>
+       <loc>https://khunslab.github.io/</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0</priority>
+   </url>
+   
+   <!-- 소개 페이지 -->
+   <url>
+       <loc>https://khunslab.github.io/about.html</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8</priority>
+   </url>
+   
+   <!-- 연락처 페이지 -->
+   <url>
+       <loc>https://khunslab.github.io/contact.html</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.7</priority>
+   </url>
+   
+   <!-- 개인정보처리방침 -->
+   <url>
+       <loc>https://khunslab.github.io/privacy.html</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>yearly</changefreq>
+       <priority>0.5</priority>
+   </url>
+   
+   <!-- 이용약관 -->
+   <url>
+       <loc>https://khunslab.github.io/terms.html</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>yearly</changefreq>
+       <priority>0.5</priority>
+   </url>
+   
+   <!-- 근로장려금 신청 가이드 -->
+   <url>
+       <loc>https://khunslab.github.io/posts/work-incentive-guide.html</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.9</priority>
+   </url>
+   
+   <!-- 민생회복지원금 사용처 완벽 가이드 -->
+   <url>
+       <loc>https://khunslab.github.io/posts/welfare-support-fund-usage.html</loc>
+       <lastmod>2025-08-07</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.9</priority>
+   </url>
+   
 </urlset>
