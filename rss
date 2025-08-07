@@ -16,8 +16,15 @@
         <docs>https://www.rssboard.org/rss-specification</docs>
         <ttl>1440</ttl>
         
-        <!-- RSS 아이템들 (새 글 추가 시 여기에 추가) -->
-        <!-- 현재는 실제 글이 없으므로 빈 상태로 유지 -->
+        <item>
+            <title>근로장려금 신청 가이드</title>
+            <description>근로장려금은 저소득 근로자가 근로를 지속할 수 있도록 돕는 국가 지원 제도입니다. 신청 자격부터 지급액 계산까지 한눈에 확인해보세요.</description>
+            <link>https://khunslab.github.io/posts/work-incentive-guide.html</link>
+            <guid>https://khunslab.github.io/posts/work-incentive-guide.html</guid>
+            <pubDate>Wed, 07 Aug 2025 00:00:00 +0900</pubDate>
+            <category>금융정보</category>
+            <author>imkyounghun77@gmail.com (정보허브)</author>
+        </item>
         
     </channel>
 </rss>
