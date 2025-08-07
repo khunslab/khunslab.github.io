@@ -998,17 +998,26 @@
 
     <script>
         // 전체 글 데이터 (새 글 추가 시 여기에 추가하세요)
-        const allPosts = [
-            {
-                id: 1,
-                category: "finance",
-                categoryName: "💰 금융정보",
-                title: "근로장려금 신청 가이드",
-                url: "/posts/work-incentive-guide.html",
-                date: "2025.08.07",
-                excerpt: "근로장려금은 저소득 근로자가 근로를 지속할 수 있도록 돕는 국가 지원 제도입니다. 신청 자격부터 지급액 계산까지 한눈에 확인해보세요.",
-            }
-        ];
+       const allPosts = [
+           {
+               id: 1,
+               category: "finance",
+               categoryName: "💰 금융정보",
+               title: "근로장려금 신청 가이드",
+               url: "/posts/work-incentive-guide.html",
+               date: "2025.08.07",
+               excerpt: "근로장려금은 저소득 근로자가 근로를 지속할 수 있도록 돕는 국가 지원 제도입니다. 신청 자격부터 지급액 계산까지 한눈에 확인해보세요."
+           },
+           {
+               id: 2,
+               category: "lifestyle",
+               categoryName: "🌱 생활정보",
+               title: "민생회복지원금 사용처 완벽 가이드",
+               url: "/posts/welfare-support-fund-usage.html",
+               date: "2025.08.07",
+               excerpt: "편의점, 마트, 병원, 학원비까지 민생소비쿠폰을 현명하게 활용하는 방법과 토스, 카카오뱅크, 네이버페이별 사용법 총정리"
+           }
+       ];
         // 페이지당 글 개수
         const POSTS_PER_PAGE = 5;
         let currentPage = 1;
