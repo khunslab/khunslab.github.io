@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>정보허브</title>
+        <description>생활에 도움되는 다양한 정보를 쉽고 이해하기 쉽게 정리하여 제공하는 정보성 블로그입니다.</description>
+        <link>https://khunslab.github.io</link>
+        <atom:link href="https://khunslab.github.io/feed" rel="self" type="application/rss+xml" />
+        <language>ko-KR</language>
+        <managingEditor>imkyounghun77@gmail.com (정보허브)</managingEditor>
+        <webMaster>imkyounghun77@gmail.com (정보허브)</webMaster>
+        <lastBuildDate>Wed, 07 Aug 2025 00:00:00 +0900</lastBuildDate>
+        <pubDate>Wed, 07 Aug 2025 00:00:00 +0900</pubDate>
+        <copyright>Copyright 2025 정보허브. All rights reserved.</copyright>
+        <category>생활정보</category>
+        <generator>정보허브 RSS Generator</generator>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <ttl>1440</ttl>
+        
+        <!-- RSS 아이템들 (새 글 추가 시 여기에 추가) -->
+        <!-- 현재는 실제 글이 없으므로 빈 상태로 유지 -->
+        
+    </channel>
+</rss>
