@@ -648,11 +648,11 @@
                 <div class="footer-section">
                     <h3>📂 주요 카테고리</h3>
                     <div class="footer-links">
-                        <a href="/category/finance.html">금융정보</a>
-                        <a href="/category/legal.html">법률정보</a>
-                        <a href="/category/housing.html">주거정보</a>
-                        <a href="/category/lifestyle.html">생활정보</a>
-                        <a href="/category/health.html">건강정보</a>
+                        <a href="#" onclick="filterByCategory('finance'); scrollToTop(); return false;">금융정보</a>
+                        <a href="#" onclick="filterByCategory('legal'); scrollToTop(); return false;">법률정보</a>
+                        <a href="#" onclick="filterByCategory('housing'); scrollToTop(); return false;">주거정보</a>
+                        <a href="#" onclick="filterByCategory('lifestyle'); scrollToTop(); return false;">생활정보</a>
+                        <a href="#" onclick="filterByCategory('health'); scrollToTop(); return false;">건강정보</a>
                     </div>
                 </div>
                 
@@ -694,6 +694,14 @@
                 menuBtn.classList.remove('active');
             }
         });
+
+        // 상단으로 스크롤 함수
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
