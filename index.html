@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타 태그 -->
+    <title>정보허브 - 생활에 도움되는 정보 모음</title>
+    <meta name="description" content="개인회생, 금융, 법률, 생활 정보 등 다양한 궁금증을 해결해드리는 정보성 블로그입니다. 전문적이고 신뢰할 수 있는 정보를 제공합니다.">
+    <meta name="keywords" content="정보, 가이드, 생활정보, 금융정보, 법률정보, 개인회생, 도움말">
+    <meta name="author" content="정보허브">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="정보허브 - 생활에 도움되는 정보 모음">
+    <meta property="og:description" content="다양한 생활 정보와 궁금증을 해결해드리는 전문 정보 블로그">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khunslab.github.io">
+    <meta property="og:image" content="https://khunslab.github.io/assets/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "정보허브",
+        "description": "생활에 도움되는 정보 모음 블로그",
+        "url": "https://khunslab.github.io",
+        "author": {
+            "@type": "Person",
+            "name": "정보허브"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://khunslab.github.io/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- 사이트맵 및 RSS -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="정보허브 RSS" href="/feed.xml">
+    
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .hero-feature {
+            text-align: center;
+        }
+        
+        .hero-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-feature p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        /* 최근 글 섹션 */
+        .recent-posts h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .recent-posts h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .post-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .post-content {
+            padding: 2rem;
+        }
+        
+        .post-category {
+            display: inline-block;
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .post-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            line-height: 1.4;
+        }
+        
+        .post-card h3 a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .post-card h3 a:hover {
+            color: #3498db;
+        }
+        
+        .post-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .post-excerpt {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: #2980b9;
+            transform: translateX(3px);
+        }
+        
+        .read-more::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .read-more:hover::after {
+            transform: translateX(3px);
+        }
+        
+        /* 사이드바 */
+        .sidebar {
+            display: grid;
+            gap: 2rem;
+            align-content: start;
+            position: sticky;
+            top: 120px;
+        }
+        
+        .widget {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e1e8ed;
+        }
+        
+        .widget h3 {
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .widget h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background: #3498db;
+        }
+        
+        .category-list {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #555;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-item:hover {
+            background: #3498db;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .category-count {
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 0.2rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .category-item:hover .category-count {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag-item {
+            background: #f8f9fa;
+            color: #555;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tag-item:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .newsletter-form input {
+            padding: 0.8rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .newsletter-form button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background: #2980b9;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: white;
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+        
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        /* 면책 조항 */
+        .disclaimer-section {
+            background: #ecf0f1;
+            padding: 3rem 0;
+        }
+        
+        .disclaimer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .disclaimer-content h2 {
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .disclaimer-content p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .disclaimer-highlight {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .disclaimer-highlight strong {
+            color: #856404;
+        }
+        
+        /* 검색 및 필터 스타일 */
+        .search-container {
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .search-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+        
+        .search-button:hover {
+            background: #2980b9;
+        }
+        
+        .active-filter {
+            background: #3498db !important;
+            color: white !important;
+        }
+        
+        .active-filter .category-count {
+            background: rgba(255,255,255,0.2) !important;
+            color: white !important;
+        }
+        
+        .filter-info {
+            background: #e8f4fd;
+            color: #2980b9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3498db;
+        }
+        
+        .clear-filter {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+        .pagination-container {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .pagination a, .pagination span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination a:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .pagination .current {
+            background: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .pagination .prev, .pagination .next {
+            width: auto;
+            padding: 0 1rem;
+            font-weight: 600;
+        }
+        
+        .pagination .disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .pagination .disabled:hover {
+            background: none;
+            color: #ccc;
+            transform: none;
+        }
+        
+        .pagination .dots {
+            color: #999;
+            cursor: default;
+        }
+        
+        .pagination .dots:hover {
+            background: none;
+            color: #999;
+            transform: none;
+        }
+        
+        /* 로딩 상태 */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">📚 정보허브</a>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/categories/">카테고리</a></li>
+                <li><a href="/about/">소개</a></li>
+                <li><a href="/contact/">연락처</a></li>
+                <li><a href="/privacy/">개인정보처리방침</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>생활에 도움되는 정보 모음</h1>
+                <p>복잡한 생활 정보를 쉽고 이해하기 쉽게 정리해드립니다.<br>
+                궁금증 해결의 첫 걸음을 여기서 시작하세요.</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">⚖️</div>
+                        <h3>법률 정보</h3>
+                        <p>복잡한 법률 내용을<br>쉽게 설명</p>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">💰</div>
+                        <h3>금융 가이드</h3>
+                        <p>금융 상품과 제도<br>한눈에 이해</p>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">🏠</div>
+                        <h3>생활 팁</h3>
+                        <p>일상에서 유용한<br>실용 정보</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="recent-posts">
+                        <h2>📌 최근 정보</h2>
+                        <!-- 글 목록 (JavaScript로 동적 생성) -->
+                        <div class="post-grid" id="post-container">
+                            <!-- 여기에 글들이 자동으로 표시됩니다 -->
+                        </div>
+
+                        <!-- 페이지네이션 -->
+                        <div class="pagination-container">
+                            <div class="pagination" id="pagination">
+                                <!-- 페이지네이션이 자동으로 생성됩니다 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="sidebar">
+                        <!-- 카테고리 위젯 -->
+                        <div class="widget">
+                            <h3>📂 카테고리</h3>
+                            <div class="category-list">
+                                <div class="category-item" onclick="filterByCategory('all')" data-category="all">
+                                    <span>📋 전체</span>
+                                    <span class="category-count" id="count-all">0</span>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('finance')" data-category="finance">
+                                    <span>💰 금융정보</span>
+                                    <span class="category-count" id="count-finance">0</span>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('legal')" data-category="legal">
+                                    <span>⚖️ 법률정보</span>
+                                    <span class="category-count" id="count-legal">0</span>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('housing')" data-category="housing">
+                                    <span>🏠 주거정보</span>
+                                    <span class="category-count" id="count-housing">0</span>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('lifestyle')" data-category="lifestyle">
+                                    <span>🌱 생활정보</span>
+                                    <span class="category-count" id="count-lifestyle">0</span>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('health')" data-category="health">
+                                    <span>🏥 건강정보</span>
+                                    <span class="category-count" id="count-health">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 인기 태그 -->
+                        <div class="widget">
+                            <h3>🏷️ 인기 태그</h3>
+                            <div class="tag-cloud">
+                                <a href="/tag/개인회생/" class="tag-item">개인회생</a>
+                                <a href="/tag/대출/" class="tag-item">대출</a>
+                                <a href="/tag/청약/" class="tag-item">청약</a>
+                                <a href="/tag/보험/" class="tag-item">보험</a>
+                                <a href="/tag/세금/" class="tag-item">세금</a>
+                                <a href="/tag/부동산/" class="tag-item">부동산</a>
+                                <a href="/tag/투자/" class="tag-item">투자</a>
+                                <a href="/tag/연금/" class="tag-item">연금</a>
+                            </div>
+                        </div>
+
+                        <!-- 검색 위젯 -->
+                        <div class="widget">
+                            <h3>🔍 정보 검색</h3>
+                            <div class="search-container">
+                                <input type="text" id="search-input" class="search-input" placeholder="궁금한 정보를 검색하세요" onkeypress="handleSearchEnter(event)">
+                                <button type="button" class="search-button" onclick="searchPosts()">검색하기</button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- 소개 섹션 -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2>📖 정보허브 소개</h2>
+                    <p>
+                        정보허브는 복잡하고 어려운 생활 정보를 누구나 이해하기 쉽게 정리하여 제공하는 정보성 블로그입니다.
+                    </p>
+                    <p>
+                        법률, 금융, 주거, 건강 등 다양한 분야의 정보를 전문적이면서도 이해하기 쉽게 설명드리며, 
+                        독자분들의 궁금증 해결에 도움이 되고자 합니다.
+                    </p>
+                    <p>
+                        모든 정보는 신뢰할 수 있는 공식 자료를 바탕으로 작성되며, 
+                        더욱 자세한 내용은 관련 전문 사이트를 통해 확인하실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 면책 조항 -->
+        <section class="disclaimer-section">
+            <div class="container">
+                <div class="disclaimer-content">
+                    <h2>⚠️ 중요한 안내사항</h2>
+                    <div class="disclaimer-highlight">
+                        <strong>본 블로그의 모든 정보는 일반적인 정보 제공 목적으로만 작성되었습니다.</strong>
+                    </div>
+                    <p>
+                        • 개인의 구체적인 상황에 따라 적용 내용이 달라질 수 있으므로, 
+                        중요한 결정을 내리기 전에는 반드시 관련 전문가나 해당 기관에 직접 상담받으시기 바랍니다.
+                    </p>
+                    <p>
+                        • 법률, 금융, 세무 등 전문적인 사항은 자격을 갖춘 전문가의 조언을 받으시는 것을 권장합니다.
+                    </p>
+                    <p>
+                        • 본 정보 활용으로 인한 어떠한 손실이나 문제에 대해서도 책임지지 않음을 알려드립니다.
+                    </p>
+                    <p>
+                        • 정확하고 최신의 정보 제공을 위해 노력하고 있으나, 정보의 정확성을 100% 보장하지는 않습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 정보허브</h3>
+                    <p>
+                        생활에 도움되는 다양한 정보를 
+                        쉽고 이해하기 쉽게 정리하여 
+                        제공하는 정보성 블로그입니다.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🔗 빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="/about/">블로그 소개</a>
+                        <a href="/contact/">연락처</a>
+                        <a href="/privacy/">개인정보처리방침</a>
+                        <a href="/terms/">이용약관</a>
+                        <a href="/sitemap.xml">사이트맵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📂 주요 카테고리</h3>
+                    <div class="footer-links">
+                        <a href="/category/finance/">금융정보</a>
+                        <a href="/category/legal/">법률정보</a>
+                        <a href="/category/housing/">주거정보</a>
+                        <a href="/category/lifestyle/">생활정보</a>
+                        <a href="/category/health/">건강정보</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📞 문의사항</h3>
+                    <p>
+                        정보 관련 문의사항이나 
+                        오류 신고는 연락처 페이지를 
+                        통해 알려주시기 바랍니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 정보허브. 모든 정보는 참고용입니다. | 
+                <a href="/privacy/">개인정보처리방침</a> | 
+                <a href="/terms/">이용약관</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 전체 글 데이터 (새 글 추가 시 여기에 추가하세요)
+        const allPosts = [
+            {
+                id: 1,
+                category: "finance",
+                categoryName: "💰 금융정보",
+                title: "개인회생 신청 전 알아야 할 핵심 사항",
+                url: "/posts/personal-recovery-guide.html",
+                date: "2025.08.07",
+                views: "245",
+                excerpt: "개인회생 신청을 고려 중이신가요? 신청 전 반드시 확인해야 할 중요한 사항들을 정리했습니다. 자격 요건부터 준비 서류까지 핵심 내용을 간략히 소개합니다."
+            },
+            {
+                id: 2,
+                category: "legal",
+                categoryName: "⚖️ 법률정보",
+                title: "소액심판 신청 방법과 주의사항",
+                url: "/posts/small-claims-court.html",
+                date: "2025.08.06",
+                views: "189",
+                excerpt: "소액심판은 간단하고 빠른 법적 해결 방법입니다. 신청 자격과 절차, 그리고 주의해야 할 점들을 알기 쉽게 설명드립니다."
+            },
+            {
+                id: 3,
+                category: "housing",
+                categoryName: "🏠 주거정보",
+                title: "청약통장 활용법과 팁",
+                url: "/posts/housing-subscription.html",
+                date: "2025.08.05",
+                views: "312",
+                excerpt: "청약통장을 효율적으로 활용하는 방법을 알려드립니다. 가점 계산법과 청약 전략의 핵심을 간단히 정리했습니다."
+            },
+            {
+                id: 4,
+                category: "finance",
+                categoryName: "💰 금융정보",
+                title: "대출 금리 비교와 선택 방법",
+                url: "/posts/loan-comparison.html",
+                date: "2025.08.04",
+                views: "156",
+                excerpt: "다양한 대출 상품의 금리를 비교하고 자신에게 맞는 대출을 선택하는 방법을 알려드립니다."
+            },
+            {
+                id: 5,
+                category: "lifestyle",
+                categoryName: "🌱 생활정보",
+                title: "전세자금대출 신청 가이드",
+                url: "/posts/jeonse-loan-guide.html",
+                date: "2025.08.03",
+                views: "278",
+                excerpt: "전세자금대출을 처음 신청하시는 분들을 위한 완벽한 가이드입니다. 필요 서류와 절차를 상세히 설명합니다."
+            },
+            {
+                id: 6,
+                category: "health",
+                categoryName: "🏥 건강정보",
+                title: "건강보험 혜택 100% 활용법",
+                url: "/posts/health-insurance-benefits.html",
+                date: "2025.08.02",
+                views: "201",
+                excerpt: "건강보험의 다양한 혜택을 놓치고 계시지는 않나요? 알아두면 유용한 건강보험 혜택들을 정리했습니다."
+            }
+            // 새 글 추가 예시:
+            // {
+            //     id: 7,
+            //     category: "finance",
+            //     categoryName: "💰 금융정보",
+            //     title: "신용카드 포인트 최대한 활용하기",
+            //     url: "/posts/credit-card-points.html",
+            //     date: "2025.08.08",
+            //     views: "89",
+            //     excerpt: "신용카드 포인트를 효율적으로 활용하는 방법을 알려드립니다..."
+            // }
+        ];
+
+        // 페이지당 글 개수
+        const POSTS_PER_PAGE = 5;
+        let currentPage = 1;
+        let totalPages = 1;
+        let filteredPosts = [...allPosts];
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCategoryCounts();
+            applyFilters();
+        });
+
+        // 카테고리별 글 개수 업데이트
+        function updateCategoryCounts() {
+            const counts = {
+                all: allPosts.length,
+                finance: allPosts.filter(post => post.category === 'finance').length,
+                legal: allPosts.filter(post => post.category === 'legal').length,
+                housing: allPosts.filter(post => post.category === 'housing').length,
+                lifestyle: allPosts.filter(post => post.category === 'lifestyle').length,
+                health: allPosts.filter(post => post.category === 'health').length
+            };
+
+            Object.keys(counts).forEach(category => {
+                const element = document.getElementById(`count-${category}`);
+                if (element) {
+                    element.textContent = counts[category];
+                }
+            });
+        }
+
+        // 카테고리 필터링
+        function filterByCategory(category) {
+            currentFilter = category;
+            currentPage = 1;
+            applyFilters();
+            updateActiveCategory(category);
+        }
+
+        // 검색 기능
+        function searchPosts() {
+            searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            currentPage = 1;
+            applyFilters();
+        }
+
+        // 엔터키로 검색
+        function handleSearchEnter(event) {
+            if (event.key === 'Enter') {
+                searchPosts();
+            }
+        }
+
+        // 필터 및 검색 적용
+        function applyFilters() {
+            // 카테고리 필터링
+            if (currentFilter === 'all') {
+                filteredPosts = [...allPosts];
+            } else {
+                filteredPosts = allPosts.filter(post => post.category === currentFilter);
+            }
+
+            // 검색어 필터링
+            if (searchQuery) {
+                filteredPosts = filteredPosts.filter(post => 
+                    post.title.toLowerCase().includes(searchQuery) ||
+                    post.excerpt.toLowerCase().includes(searchQuery)
+                );
+            }
+
+            totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+            displayPosts(currentPage);
+            createPagination();
+            showFilterInfo();
+        }
+
+        // 활성 카테고리 표시
+        function updateActiveCategory(category) {
+            // 모든 카테고리에서 active 클래스 제거
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.classList.remove('active-filter');
+            });
+
+            // 선택된 카테고리에 active 클래스 추가
+            const selectedCategory = document.querySelector(`[data-category="${category}"]`);
+            if (selectedCategory) {
+                selectedCategory.classList.add('active-filter');
+            }
+        }
+
+        // 필터 정보 표시
+        function showFilterInfo() {
+            const container = document.getElementById('post-container');
+            let filterInfo = '';
+
+            if (currentFilter !== 'all' || searchQuery) {
+                filterInfo = '<div class="filter-info">';
+                if (searchQuery) {
+                    filterInfo += `🔍 검색어: "${searchQuery}" `;
+                }
+                if (currentFilter !== 'all') {
+                    const categoryName = allPosts.find(post => post.category === currentFilter)?.categoryName || currentFilter;
+                    filterInfo += `📂 카테고리: ${categoryName} `;
+                }
+                filterInfo += `(총 ${filteredPosts.length}개)`;
+                filterInfo += '<button class="clear-filter" onclick="clearFilters()">필터 초기화</button>';
+                filterInfo += '</div>';
+            }
+
+            const postsHTML = generatePostsHTML();
+            container.innerHTML = filterInfo + postsHTML;
+        }
+
+        // 필터 초기화
+        function clearFilters() {
+            currentFilter = 'all';
+            searchQuery = '';
+            currentPage = 1;
+            document.getElementById('search-input').value = '';
+            applyFilters();
+            updateActiveCategory('all');
+        }
+
+        // 글 HTML 생성
+        function generatePostsHTML() {
+            const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+            const endIndex = startIndex + POSTS_PER_PAGE;
+            const postsToShow = filteredPosts.slice(startIndex, endIndex);
+
+            if (postsToShow.length === 0) {
+                return '<div class="loading">검색 결과가 없습니다.</div>';
+            }
+
+            let html = '';
+            postsToShow.forEach(post => {
+                html += `
+                    <article class="post-card">
+                        <div class="post-content">
+                            <span class="post-category">${post.categoryName}</span>
+                            <h3><a href="${post.url}">${post.title}</a></h3>
+                            <div class="post-meta">
+                                <span>📅 ${post.date}</span>
+                                <span>👀 조회 ${post.views}</span>
+                            </div>
+                            <p class="post-excerpt">${post.excerpt}</p>
+                            <a href="${post.url}" class="read-more">자세히 보기</a>
+                        </div>
+                    </article>
+                `;
+            });
+
+            return html;
+        }
+
+        // 글 목록 표시 함수
+        function displayPosts(page) {
+            const container = document.getElementById('post-container');
+            showFilterInfo();
+            
+            // 페이지 상단으로 부드럽게 스크롤
+            document.querySelector('.recent-posts').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // 페이지네이션 생성 함수
+        function createPagination() {
+            const container = document.getElementById('pagination');
+
+            if (totalPages <= 1) {
+                container.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+
+            // 이전 버튼
+            if (currentPage > 1) {
+                html += `<a href="#" class="prev" onclick="changePage(${currentPage - 1})">◀ 이전</a>`;
+            } else {
+                html += `<span class="prev disabled">◀ 이전</span>`;
+            }
+
+            // 페이지 번호들
+            const pageNumbers = getPageNumbers();
+            pageNumbers.forEach(num => {
+                if (num === '...') {
+                    html += `<span class="dots">...</span>`;
+                } else if (num === currentPage) {
+                    html += `<span class="current">${num}</span>`;
+                } else {
+                    html += `<a href="#" onclick="changePage(${num})">${num}</a>`;
+                }
+            });
+
+            // 다음 버튼
+            if (currentPage < totalPages) {
+                html += `<a href="#" class="next" onclick="changePage(${currentPage + 1})">다음 ▶</a>`;
+            } else {
+                html += `<span class="next disabled">다음 ▶</span>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        // 페이지 번호 계산 (최대 5개 표시)
+        function getPageNumbers() {
+            const pages = [];
+            const maxVisible = 5;
+
+            if (totalPages <= maxVisible) {
+                for (let i = 1; i <= totalPages; i++) {
+                    pages.push(i);
+                }
+            } else {
+                let start = Math.max(1, currentPage - 2);
+                let end = Math.min(totalPages, currentPage + 2);
+
+                if (end - start < maxVisible - 1) {
+                    if (start === 1) {
+                        end = start + maxVisible - 1;
+                    } else {
+                        start = end - maxVisible + 1;
+                    }
+                }
+
+                if (start > 1) {
+                    pages.push(1);
+                    if (start > 2) pages.push('...');
+                }
+
+                for (let i = start; i <= end; i++) {
+                    pages.push(i);
+                }
+
+                if (end < totalPages) {
+                    if (end < totalPages - 1) pages.push('...');
+                    pages.push(totalPages);
+                }
+            }
+
+            return pages;
+        }
+
+        // 페이지 변경 함수
+        function changePage(page) {
+            if (page < 1 || page > totalPages) return;
+            
+            currentPage = page;
+            displayPosts(currentPage);
+            createPagination();
+        }
+    </script>
+    </script>
+</body>
+</html>
