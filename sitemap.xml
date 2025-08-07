@@ -43,5 +43,13 @@
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+
+    <!-- 근로장려금 신청 가이드 -->
+    <url>
+        <loc>https://khunslab.github.io/posts/work-incentive-guide.html</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
     
 </urlset>
