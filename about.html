@@ -16,6 +16,7 @@
     <meta property="og:description" content="복잡한 생활 정보를 쉽고 이해하기 쉽게 정리하여 제공하는 전문 정보 블로그">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://khunslab.github.io/about.html">
+    <meta property="og:image" content="https://khunslab.github.io/assets/og-image.jpg">
     
     <!-- 구조화된 데이터 -->
     <script type="application/ld+json">
@@ -56,8 +57,14 @@
     }
     </script>
     
+    <!-- 사이트맵 및 RSS -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="정보허브 RSS" href="/feed.xml">
+    
+    <!-- 파비콘 -->
     <link rel="canonical" href="https://khunslab.github.io/about.html">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
     <style>
         * {
@@ -113,10 +120,27 @@
             color: #555;
             font-weight: 500;
             transition: color 0.3s ease;
+            position: relative;
         }
         
         .nav-links a:hover, .nav-links a.active {
             color: #3498db;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
         }
         
         /* 모바일 햄버거 메뉴 */
@@ -187,8 +211,6 @@
             background: #f8f9fa;
             color: #3498db;
         }
-        
-        /* Breadcrumb - 제거됨 */
         
         /* Main Content */
         .main-content {
@@ -448,6 +470,14 @@
             padding-top: 2rem;
             text-align: center;
             color: #95a5a6;
+        }
+        
+        .footer-bottom a {
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a:hover {
+            color: #3498db;
         }
         
         /* 반응형 */
@@ -739,11 +769,11 @@
                 <div class="footer-section">
                     <h3>📂 주요 카테고리</h3>
                     <div class="footer-links">
-                        <a href="/?category=finance">금융정보</a>
-                        <a href="/?category=legal">법률정보</a>
-                        <a href="/?category=housing">주거정보</a>
-                        <a href="/?category=lifestyle">생활정보</a>
-                        <a href="/?category=health">건강정보</a>
+                        <a href="/category/finance.html">금융정보</a>
+                        <a href="/category/legal.html">법률정보</a>
+                        <a href="/category/housing.html">주거정보</a>
+                        <a href="/category/lifestyle.html">생활정보</a>
+                        <a href="/category/health.html">건강정보</a>
                     </div>
                 </div>
                 
