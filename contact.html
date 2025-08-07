@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타 태그 -->
+    <title>연락처 - 정보허브</title>
+    <meta name="description" content="정보허브에 문의사항이 있으시면 언제든 연락주세요. 정보 오류 신고, 개선 제안, 기타 문의사항을 받고 있습니다.">
+    <meta name="keywords" content="정보허브, 연락처, 문의, 제안, 오류신고">
+    <meta name="author" content="정보허브">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="연락처 - 정보허브">
+    <meta property="og:description" content="정보허브에 문의사항이나 제안사항이 있으시면 언제든 연락주세요">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khunslab.github.io/contact.html">
+    <meta property="og:image" content="https://khunslab.github.io/assets/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "연락처",
+        "description": "정보허브 연락처 및 문의 방법",
+        "url": "https://khunslab.github.io/contact.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "정보허브",
+            "description": "생활 정보 전문 블로그",
+            "url": "https://khunslab.github.io",
+            "email": "imkyounghun77@gmail.com"
+        }
+    }
+    </script>
+    
+    <!-- 브레드크럼 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://khunslab.github.io"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "연락처",
+                "item": "https://khunslab.github.io/contact.html"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- 사이트맵 및 RSS -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="정보허브 RSS" href="/feed.xml">
+    
+    <!-- 파비콘 -->
+    <link rel="canonical" href="https://khunslab.github.io/contact.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: #3498db;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* 모바일 햄버거 메뉴 */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #555;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background: #f8f9fa;
+            color: #3498db;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .contact-section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .contact-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .contact-section h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin: 2rem 0 1rem;
+        }
+        
+        .contact-section p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+        
+        .contact-card h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #2980b9;
+        }
+        
+        .inquiry-types {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .inquiry-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .inquiry-icon {
+            font-size: 2rem;
+            color: #3498db;
+            flex-shrink: 0;
+        }
+        
+        .inquiry-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .inquiry-content p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .response-info {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .response-info h4 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .response-info p {
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .highlight-box p {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-box strong {
+            color: #6c5400;
+        }
+        
+        .email-template {
+            background: #f8f9fa;
+            border: 1px solid #e1e8ed;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #555;
+            margin: 1rem 0;
+        }
+        
+        .template-label {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a {
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a:hover {
+            color: #3498db;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-section {
+                padding: 2rem;
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            /* 모바일 네비게이션 */
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-section {
+                padding: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">📚 정보허브</a>
+            
+            <!-- 데스크톱 메뉴 -->
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about.html">소개</a></li>
+                <li><a href="/contact.html" class="active">연락처</a></li>
+                <li><a href="/privacy.html">개인정보처리방침</a></li>
+            </ul>
+            
+            <!-- 모바일 햄버거 버튼 -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- 모바일 메뉴 -->
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="/">🏠 홈</a></li>
+                    <li><a href="/about.html">📖 소개</a></li>
+                    <li><a href="/contact.html" class="active">📞 연락처</a></li>
+                    <li><a href="/privacy.html">🔒 개인정보처리방침</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- 히어로 섹션 -->
+            <section class="contact-hero">
+                <h1>📞 연락처</h1>
+                <p>정보허브에 대한 문의사항이나 제안사항이 있으시면<br>
+                언제든지 편하게 연락해 주세요.</p>
+            </section>
+
+            <!-- 연락 방법 -->
+            <section class="contact-section">
+                <h2>📧 연락 방법</h2>
+                <p>
+                    정보허브를 더 나은 플랫폼으로 만들어 나가기 위해 여러분의 소중한 의견을 기다리고 있습니다.
+                </p>
+
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>이메일 문의</h4>
+                        <p>가장 확실하고 빠른 연락 방법입니다. 언제든지 이메일을 보내주세요.</p>
+                        <a href="mailto:imkyounghun77@gmail.com" class="contact-link">이메일 보내기</a>
+                    </div>
+                </div>
+
+                <div class="response-info">
+                    <h4>⏰ 응답 시간</h4>
+                    <p>
+                        <strong>평일:</strong> 24시간 이내 응답<br>
+                        <strong>주말/공휴일:</strong> 48시간 이내 응답<br>
+                        <strong>긴급 사안:</strong> 제목에 [긴급]을 명시해 주세요
+                    </p>
+                </div>
+            </section>
+
+            <!-- 문의 유형 -->
+            <section class="contact-section">
+                <h2>📝 문의 유형</h2>
+                <p>다음과 같은 내용으로 언제든 연락주세요:</p>
+
+                <div class="inquiry-types">
+                    <div class="inquiry-item">
+                        <div class="inquiry-icon">🚨</div>
+                        <div class="inquiry-content">
+                            <h4>정보 오류 신고</h4>
+                            <p>잘못된 정보나 오타, 업데이트가 필요한 내용을 발견하셨다면 신고해 주세요.</p>
+                        </div>
+                    </div>
+                    <div class="inquiry-item">
+                        <div class="inquiry-icon">💡</div>
+                        <div class="inquiry-content">
+                            <h4>새로운 주제 제안</h4>
+                            <p>다루었으면 하는 새로운 주제나 정보가 있다면 제안해 주세요.</p>
+                        </div>
+                    </div>
+                    <div class="inquiry-item">
+                        <div class="inquiry-icon">🔧</div>
+                        <div class="inquiry-content">
+                            <h4>사이트 개선 제안</h4>
+                            <p>웹사이트 기능 개선이나 사용성 향상에 대한 아이디어를 알려주세요.</p>
+                        </div>
+                    </div>
+                    <div class="inquiry-item">
+                        <div class="inquiry-icon">❓</div>
+                        <div class="inquiry-content">
+                            <h4>기타 문의사항</h4>
+                            <p>위에 해당하지 않는 모든 문의사항도 환영합니다.</p>
+                        </div>
+                    </div>
+                    <div class="inquiry-item">
+                        <div class="inquiry-icon">🛡️</div>
+                        <div class="inquiry-content">
+                            <h4>개인정보 관련</h4>
+                            <p>개인정보 처리에 대한 문의나 요청사항이 있으시면 연락주세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 이메일 작성 가이드 -->
+            <section class="contact-section">
+                <h2>✉️ 효율적인 문의 방법</h2>
+                <p>
+                    더 정확하고 빠른 답변을 위해 다음 사항을 참고해 주세요:
+                </p>
+
+                <h3>📋 이메일 작성 시 포함해 주세요</h3>
+                <p>
+                    <strong>제목:</strong> 문의 내용을 간단히 요약<br>
+                    <strong>문의 유형:</strong> 어떤 종류의 문의인지 명시<br>
+                    <strong>구체적인 내용:</strong> 상황을 자세히 설명<br>
+                    <strong>관련 페이지:</strong> 해당되는 경우 URL 포함
+                </p>
+
+                <div class="template-label">📧 이메일 예시 템플릿:</div>
+                <div class="email-template">
+                    제목: [정보 오류 신고] 개인회생 관련 내용 수정 요청<br><br>
+                    
+                    안녕하세요, 정보허브 운영팀님<br><br>
+                    
+                    정보허브를 잘 이용하고 있는 독자입니다.<br><br>
+                    
+                    ▶ 문의 유형: 정보 오류 신고<br>
+                    ▶ 관련 페이지: (해당 페이지 URL)<br>
+                    ▶ 발견된 오류: (구체적인 오류 내용)<br>
+                    ▶ 수정 제안: (올바른 정보나 제안사항)<br><br>
+                    
+                    감사합니다.
+                </div>
+            </section>
+
+            <!-- 주의사항 -->
+            <section class="contact-section">
+                <div class="highlight-box">
+                    <h4>⚠️ 문의 시 주의사항</h4>
+                    <p>
+                        <strong>정보허브는 정보 제공 목적의 블로그입니다.</strong>
+                    </p>
+                    <p>
+                        <strong>개인적인 법률, 금융 상담은 전문 기관에 문의하시기 바랍니다.</strong><br>
+                        <strong>구체적인 개인 상황에 대한 조언은 제공하지 않습니다.</strong><br>
+                        <strong>응급상황이나 긴급한 법적 도움이 필요한 경우 관련 전문기관에 직접 연락하세요.</strong>
+                    </p>
+                </div>
+
+                <h3>🏛️ 전문 상담 기관</h3>
+                <p>
+                    <strong>법무부 법무콜센터:</strong> 1345 (법률 상담)<br>
+                    <strong>금융감독원 콜센터:</strong> 1332 (금융 상담)<br>
+                    <strong>대한법률구조공단:</strong> 132 (무료 법률 상담)<br>
+                    <strong>국민권익위원회:</strong> 110 (민원 상담)
+                </p>
+            </section>
+
+            <!-- 운영 정보 -->
+            <section class="contact-section">
+                <h2>🏢 운영 정보</h2>
+                
+                <h3>📧 연락처 정보</h3>
+                <p>
+                    <strong>이메일:</strong> imkyounghun77@gmail.com<br>
+                    <strong>운영시간:</strong> 평일 09:00 ~ 18:00 (주말/공휴일 제외)<br>
+                    <strong>운영방식:</strong> 개인 블로그 운영
+                </p>
+
+                <div class="response-info">
+                    <h4>💬 답변 정책</h4>
+                    <p>
+                        모든 문의사항에 대해 성실히 답변드리겠습니다. 단, 다음의 경우 답변이 어려울 수 있습니다:
+                    </p>
+                    <p>
+                        <strong>개인적인 법률/금융 상담 요청</strong><br>
+                        <strong>상업적 목적의 홍보성 메일</strong><br>
+                        <strong>무분별한 스팸 메일</strong><br>
+                        <strong>타인을 비방하거나 욕설이 포함된 내용</strong>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 정보허브</h3>
+                    <p>
+                        생활에 도움되는 다양한 정보를 
+                        쉽고 이해하기 쉽게 정리하여 
+                        제공하는 정보성 블로그입니다.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🔗 빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="/about.html">블로그 소개</a>
+                        <a href="/contact.html">연락처</a>
+                        <a href="/privacy.html">개인정보처리방침</a>
+                        <a href="/terms.html">이용약관</a>
+                        <a href="/sitemap.xml">사이트맵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📂 주요 카테고리</h3>
+                    <div class="footer-links">
+                        <a href="/category/finance.html">금융정보</a>
+                        <a href="/category/legal.html">법률정보</a>
+                        <a href="/category/housing.html">주거정보</a>
+                        <a href="/category/lifestyle.html">생활정보</a>
+                        <a href="/category/health.html">건강정보</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📞 문의사항</h3>
+                    <p>
+                        정보 관련 문의사항이나 
+                        오류 신고는 연락처 페이지를 
+                        통해 알려주시기 바랍니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 정보허브. 모든 정보는 참고용입니다. | 
+                <a href="/privacy.html">개인정보처리방침</a> | 
+                <a href="/terms.html">이용약관</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // 모바일 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!e.target.closest('nav')) {
+                mobileNav.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
