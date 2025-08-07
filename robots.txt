@@ -1,0 +1,16 @@
+# 정보허브 로봇 제어 파일
+# 모든 검색엔진 봇 허용
+
+User-agent: *
+Allow: /
+
+# 사이트맵 위치
+Sitemap: https://khunslab.github.io/sitemap.xml
+
+# 크롤링 속도 조절 (1초 대기)
+Crawl-delay: 1
+
+# 특정 파일/디렉토리 차단 (향후 필요시 사용)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /*.pdf$
