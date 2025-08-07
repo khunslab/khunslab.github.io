@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타 태그 -->
+    <title>근로장려금 신청 가이드 - 정보허브</title>
+    <meta name="description" content="근로장려금 신청 방법과 지급 기준에 대해 알아보세요. 신청 자격, 필요 서류, 지급액 계산 방법까지 한 번에 확인하실 수 있습니다.">
+    <meta name="keywords" content="근로장려금, 근로장려금신청, 국세청, 세액공제, 저소득층지원">
+    <meta name="author" content="정보허브">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="근로장려금 신청 가이드 - 정보허브">
+    <meta property="og:description" content="근로장려금 신청 방법과 지급 기준에 대한 완벽한 가이드">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://khunslab.github.io/posts/work-incentive-guide.html">
+    <meta property="og:image" content="https://khunslab.github.io/assets/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "근로장려금 신청 가이드",
+        "description": "근로장려금 신청 방법과 지급 기준에 대한 완벽한 가이드",
+        "author": {
+            "@type": "Person",
+            "name": "정보허브"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "정보허브",
+            "url": "https://khunslab.github.io"
+        },
+        "datePublished": "2025-08-07",
+        "dateModified": "2025-08-07",
+        "url": "https://khunslab.github.io/posts/work-incentive-guide.html",
+        "mainEntityOfPage": "https://khunslab.github.io/posts/work-incentive-guide.html"
+    }
+    </script>
+    
+    <!-- 사이트맵 및 RSS -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="정보허브 RSS" href="/rss">
+    
+    <!-- 파비콘 -->
+    <link rel="canonical" href="https://khunslab.github.io/posts/work-incentive-guide.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: #3498db;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* 모바일 햄버거 메뉴 */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #555;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background: #f8f9fa;
+            color: #3498db;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .article-header {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+            border: 1px solid #e1e8ed;
+            text-align: center;
+        }
+        
+        .article-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-summary {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .article-content h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin: 2rem 0 1rem;
+        }
+        
+        .article-content p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h3 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .highlight-box p {
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+        
+        .info-list {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            margin: 2rem 0;
+        }
+        
+        .info-list h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .info-list p {
+            color: #555;
+            margin-bottom: 0.8rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .disclaimer h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .disclaimer p {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a {
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a:hover {
+            color: #3498db;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            
+            .article-header,
+            .article-content {
+                padding: 2rem;
+            }
+            
+            .cta-section {
+                padding: 2rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            /* 모바일 네비게이션 */
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .article-header h1 {
+                font-size: 1.7rem;
+            }
+            
+            .article-header,
+            .article-content {
+                padding: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">📚 정보허브</a>
+            
+            <!-- 데스크톱 메뉴 -->
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about.html">소개</a></li>
+                <li><a href="/contact.html">연락처</a></li>
+                <li><a href="/privacy.html">개인정보처리방침</a></li>
+            </ul>
+            
+            <!-- 모바일 햄버거 버튼 -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- 모바일 메뉴 -->
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="/">🏠 홈</a></li>
+                    <li><a href="/about.html">📖 소개</a></li>
+                    <li><a href="/contact.html">📞 연락처</a></li>
+                    <li><a href="/privacy.html">🔒 개인정보처리방침</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- 글 헤더 -->
+            <section class="article-header">
+                <h1>💰 근로장려금 신청 가이드</h1>
+                <div class="article-meta">
+                    📅 2025년 8월 7일 · 💰 금융정보 · 👀 조회 1
+                </div>
+                <p class="article-summary">
+                    근로장려금은 저소득 근로자가 근로를 지속할 수 있도록 돕는 국가 지원 제도입니다. 
+                    신청 자격부터 지급액 계산까지 한눈에 확인해보세요.
+                </p>
+            </section>
+
+            <!-- 글 본문 -->
+            <article class="article-content">
+                <h2>🎯 근로장려금이란?</h2>
+                <p>
+                    근로장려금은 저소득 근로자나 자영업자의 근로 의욕을 높이고 실질소득을 지원하기 위해 
+                    정부에서 지급하는 세액공제 혜택입니다. 일정 소득 이하의 가구에 최대 330만원까지 지원받을 수 있습니다.
+                </p>
+
+                <div class="highlight-box">
+                    <h3>📋 주요 혜택</h3>
+                    <p>
+                        <strong>최대 지급액:</strong> 연간 330만원 (단독가구 기준 150만원)<br>
+                        <strong>신청 방법:</strong> 국세청 홈텍스 온라인 신청<br>
+                        <strong>지급 시기:</strong> 신청 후 약 1-2개월 후 계좌 입금
+                    </p>
+                </div>
+
+                <h2>✅ 신청 자격 조건</h2>
+                <p>근로장려금 신청을 위해서는 다음 조건을 모두 충족해야 합니다:</p>
+
+                <div class="info-list">
+                    <h4>🏠 가구 요건</h4>
+                    <p><strong>단독가구:</strong> 연간 총소득 2,200만원 이하</p>
+                    <p><strong>홑벌이 가구:</strong> 연간 총소득 3,200만원 이하</p>
+                    <p><strong>맞벌이 가구:</strong> 연간 총소득 3,800만원 이하</p>
+                </div>
+
+                <div class="info-list">
+                    <h4>💼 근로 요건</h4>
+                    <p><strong>근로소득:</strong> 연간 근로소득이 있어야 함</p>
+                    <p><strong>사업소득:</strong> 자영업자의 경우 사업소득 인정</p>
+                    <p><strong>근로기간:</strong> 6개월 이상 근로 또는 사업 영위</p>
+                </div>
+
+                <h2>📄 필요 서류</h2>
+                <p>온라인 신청 시 대부분 자동으로 연계되지만, 필요한 경우 다음 서류를 준비하세요:</p>
+
+                <div class="info-list">
+                    <h4>📑 기본 서류</h4>
+                    <p><strong>소득금액증명원:</strong> 국세청 발급</p>
+                    <p><strong>근로소득원천징수영수증:</strong> 직장에서 발급</p>
+                    <p><strong>주민등록등본:</strong> 가구원 확인용</p>
+                    <p><strong>통장 사본:</strong> 지급받을 계좌 정보</p>
+                </div>
+
+                <h2>💻 신청 방법</h2>
+                <p>근로장려금 신청은 간단하게 온라인으로 가능합니다:</p>
+
+                <div class="info-list">
+                    <h4>🔗 온라인 신청 절차</h4>
+                    <p><strong>1단계:</strong> 국세청 홈텍스 사이트 접속</p>
+                    <p><strong>2단계:</strong> 공인인증서로 로그인</p>
+                    <p><strong>3단계:</strong> '근로장려금 신청' 메뉴 선택</p>
+                    <p><strong>4단계:</strong> 신청서 작성 및 제출</p>
+                    <p><strong>5단계:</strong> 신청 완료 및 처리 결과 대기</p>
+                </div>
+            </article>
+
+            <!-- CTA 섹션 (백링크) -->
+            <section class="cta-section">
+                <h2>🚀 더 자세한 근로장려금 신청 가이드</h2>
+                <p>
+                    신청 절차부터 지급액 계산, 주의사항까지<br>
+                    근로장려금 신청 방법을 확인해보세요!
+                </p>
+                <a href="https://nomoneynosunny.com/%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88%EC%8B%A0%EC%B2%AD" class="cta-button" target="_blank">
+                    📖 근로장려금 신청 바로가기
+                </a>
+            </section>
+
+            <!-- 면책조항 -->
+            <div class="disclaimer">
+                <h3>⚠️ 중요 안내사항</h3>
+                <p>
+                    본 정보는 일반적인 안내 목적으로 작성되었습니다. 
+                    개인의 구체적인 상황에 따라 신청 자격이나 지급액이 달라질 수 있으므로, 
+                    정확한 정보는 국세청이나 세무 전문가에게 직접 확인하시기 바랍니다.
+                </p>
+                <p>
+                    근로장려금 관련 최신 정보는 국세청 홈텍스(www.hometax.go.kr)에서 확인하실 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 정보허브</h3>
+                    <p>
+                        생활에 도움되는 다양한 정보를 
+                        쉽고 이해하기 쉽게 정리하여 
+                        제공하는 정보성 블로그입니다.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🔗 빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="/about.html">블로그 소개</a>
+                        <a href="/contact.html">연락처</a>
+                        <a href="/privacy.html">개인정보처리방침</a>
+                        <a href="/terms.html">이용약관</a>
+                        <a href="/sitemap.xml">사이트맵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📂 주요 카테고리</h3>
+                    <div class="footer-links">
+                        <a href="/category/finance.html">금융정보</a>
+                        <a href="/category/legal.html">법률정보</a>
+                        <a href="/category/housing.html">주거정보</a>
+                        <a href="/category/lifestyle.html">생활정보</a>
+                        <a href="/category/health.html">건강정보</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📞 문의사항</h3>
+                    <p>
+                        정보 관련 문의사항이나 
+                        오류 신고는 연락처 페이지를 
+                        통해 알려주시기 바랍니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 정보허브. 모든 정보는 참고용입니다. | 
+                <a href="/privacy.html">개인정보처리방침</a> | 
+                <a href="/terms.html">이용약관</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // 모바일 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!e.target.closest('nav')) {
+                mobileNav.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
