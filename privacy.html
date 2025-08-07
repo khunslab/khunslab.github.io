@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타 태그 -->
+    <title>개인정보처리방침 - 정보허브</title>
+    <meta name="description" content="정보허브의 개인정보처리방침입니다. 개인정보 수집, 이용, 보관, 파기에 대한 정책을 안내드립니다.">
+    <meta name="keywords" content="개인정보처리방침, 정보허브, 개인정보보호, 프라이버시">
+    <meta name="author" content="정보허브">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="개인정보처리방침 - 정보허브">
+    <meta property="og:description" content="정보허브의 개인정보처리방침 및 개인정보보호 정책">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khunslab.github.io/privacy.html">
+    <meta property="og:image" content="https://khunslab.github.io/assets/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "개인정보처리방침",
+        "description": "정보허브의 개인정보처리방침 및 개인정보보호 정책",
+        "url": "https://khunslab.github.io/privacy.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "정보허브",
+            "description": "생활 정보 전문 블로그",
+            "url": "https://khunslab.github.io"
+        }
+    }
+    </script>
+    
+    <!-- 브레드크럼 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://khunslab.github.io"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "개인정보처리방침",
+                "item": "https://khunslab.github.io/privacy.html"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- 사이트맵 및 RSS -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="정보허브 RSS" href="/feed.xml">
+    
+    <!-- 파비콘 -->
+    <link rel="canonical" href="https://khunslab.github.io/privacy.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: #3498db;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* 모바일 햄버거 메뉴 */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #555;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background: #f8f9fa;
+            color: #3498db;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .privacy-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .privacy-hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .privacy-hero p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .update-notice {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .update-notice h3 {
+            color: #2980b9;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .update-notice p {
+            color: #34495e;
+            margin: 0;
+        }
+        
+        .privacy-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .privacy-section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .privacy-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin: 2rem 0 1rem;
+        }
+        
+        .privacy-section h4 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+        
+        .privacy-section p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .privacy-section ul {
+            margin: 1rem 0 2rem 2rem;
+            color: #555;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .highlight-box p {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-box strong {
+            color: #6c5400;
+        }
+        
+        .contact-box {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .contact-box h4 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-box p {
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #2980b9;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+        }
+        
+        .data-table th,
+        .data-table td {
+            border: 1px solid #e1e8ed;
+            padding: 1rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .data-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .data-table td {
+            color: #555;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a {
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a:hover {
+            color: #3498db;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .privacy-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .privacy-section {
+                padding: 2rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            /* 모바일 네비게이션 */
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .privacy-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .privacy-section {
+                padding: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .privacy-section ul {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">📚 정보허브</a>
+            
+            <!-- 데스크톱 메뉴 -->
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about.html">소개</a></li>
+                <li><a href="/contact.html">연락처</a></li>
+                <li><a href="/privacy.html" class="active">개인정보처리방침</a></li>
+            </ul>
+            
+            <!-- 모바일 햄버거 버튼 -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- 모바일 메뉴 -->
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="/">🏠 홈</a></li>
+                    <li><a href="/about.html">📖 소개</a></li>
+                    <li><a href="/contact.html">📞 연락처</a></li>
+                    <li><a href="/privacy.html" class="active">🔒 개인정보처리방침</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- 히어로 섹션 -->
+            <section class="privacy-hero">
+                <h1>🔒 개인정보처리방침</h1>
+                <p>정보허브는 이용자의 개인정보를 소중히 여기며,<br>
+                개인정보보호법 등 관련 법령을 준수하고 있습니다.</p>
+            </section>
+
+            <!-- 업데이트 공지 -->
+            <div class="update-notice">
+                <h3>📅 최근 업데이트</h3>
+                <p>본 개인정보처리방침은 <strong>2025년 8월 7일</strong>에 최종 업데이트되었습니다.</p>
+            </div>
+
+            <!-- 1. 개인정보 처리 목적 -->
+            <section class="privacy-section">
+                <h2>1. 개인정보 처리 목적</h2>
+                <p>
+                    정보허브는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 
+                    다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 
+                    개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+                </p>
+
+                <h3>🔹 현재 정보허브에서 처리하는 개인정보</h3>
+                <div class="highlight-box">
+                    <h4>📋 중요 안내</h4>
+                    <p>
+                        <strong>정보허브는 현재 별도의 회원가입이나 개인정보 수집을 하지 않습니다.</strong>
+                    </p>
+                    <p>
+                        본 개인정보처리방침은 향후 서비스 확장에 대비한 정책 안내이며, 
+                        현재는 웹사이트 방문 시 자동으로 생성되는 최소한의 정보만 처리됩니다.
+                    </p>
+                </div>
+
+                <h4>가. 자동 수집 정보</h4>
+                <ul>
+                    <li><strong>수집 항목:</strong> IP주소, 쿠키, 방문 일시, 브라우저 정보, 운영체제 정보</li>
+                    <li><strong>수집 목적:</strong> 웹사이트 접속 빈도 분석, 서비스 개선</li>
+                    <li><strong>수집 방법:</strong> 웹사이트 방문 시 자동 생성</li>
+                </ul>
+            </section>
+
+            <!-- 2. 개인정보 처리 및 보유 기간 -->
+            <section class="privacy-section">
+                <h2>2. 개인정보 처리 및 보유 기간</h2>
+                
+                <h3>🔹 보유 기간</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>정보 종류</th>
+                            <th>보유 기간</th>
+                            <th>보유 목적</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>웹 로그 정보</td>
+                            <td>1년</td>
+                            <td>서비스 품질 개선, 통계 분석</td>
+                        </tr>
+                        <tr>
+                            <td>쿠키 정보</td>
+                            <td>1년 또는 사용자 삭제 시</td>
+                            <td>사용자 편의 제공</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    개인정보 처리 목적이 달성된 경우에는 지체없이 해당 개인정보를 파기합니다.
+                </p>
+            </section>
+
+            <!-- 3. 처리하는 개인정보 항목 -->
+            <section class="privacy-section">
+                <h2>3. 처리하는 개인정보 항목</h2>
+                
+                <h3>🔹 자동 수집 정보</h3>
+                <ul>
+                    <li><strong>접속 로그:</strong> 접속 IP주소, 접속 일시, 이용 기록</li>
+                    <li><strong>기기 정보:</strong> 브라우저 종류 및 버전, 운영체제</li>
+                    <li><strong>쿠키:</strong> 사용자 설정, 방문 기록</li>
+                </ul>
+
+                <h3>🔹 향후 서비스 확장 시 수집 예정 정보</h3>
+                <div class="highlight-box">
+                    <h4>📋 사전 안내</h4>
+                    <p>
+                        향후 회원 서비스나 뉴스레터 등의 서비스를 제공할 경우, 
+                        다음과 같은 정보를 수집할 수 있으며, 이 경우 별도의 동의를 받을 예정입니다.
+                    </p>
+                </div>
+                
+                <ul>
+                    <li><strong>필수 정보:</strong> 이메일 주소, 닉네임</li>
+                    <li><strong>선택 정보:</strong> 관심 분야, 알림 설정</li>
+                </ul>
+            </section>
+
+            <!-- 4. 개인정보 제3자 제공 -->
+            <section class="privacy-section">
+                <h2>4. 개인정보의 제3자 제공</h2>
+                
+                <div class="highlight-box">
+                    <h4>🛡️ 제3자 제공 금지</h4>
+                    <p>
+                        <strong>정보허브는 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다.</strong>
+                    </p>
+                </div>
+
+                <p>다만, 다음의 경우에는 예외적으로 제3자 제공이 가능합니다:</p>
+                <ul>
+                    <li>이용자가 사전에 동의한 경우</li>
+                    <li>법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+                    <li>통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우</li>
+                </ul>
+            </section>
+
+            <!-- 5. 개인정보 처리 위탁 -->
+            <section class="privacy-section">
+                <h2>5. 개인정보 처리 위탁</h2>
+                
+                <h3>🔹 현재 위탁 현황</h3>
+                <p>정보허브는 현재 개인정보 처리업무를 외부에 위탁하고 있지 않습니다.</p>
+
+                <h3>🔹 향후 위탁 시 안내</h3>
+                <p>
+                    향후 개인정보 처리업무를 위탁하는 경우, 위탁계약 체결 시 개인정보보호법 제26조에 따라 
+                    다음 사항을 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하도록 감독하겠습니다.
+                </p>
+                <ul>
+                    <li>위탁업무 수행 목적 외 개인정보 처리 금지</li>
+                    <li>개인정보의 기술적·관리적 보호조치</li>
+                    <li>재위탁 제한</li>
+                    <li>수탁자에 대한 관리·감독</li>
+                    <li>손해배상 등 책임에 관한 사항</li>
+                </ul>
+            </section>
+
+            <!-- 6. 개인정보 파기 -->
+            <section class="privacy-section">
+                <h2>6. 개인정보의 파기</h2>
+                
+                <h3>🔹 파기 절차</h3>
+                <p>
+                    개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 
+                    지체없이 해당 개인정보를 파기합니다.
+                </p>
+
+                <h3>🔹 파기 방법</h3>
+                <ul>
+                    <li><strong>전자적 파일:</strong> 기록을 재생할 수 없는 기술적 방법을 사용하여 완전 삭제</li>
+                    <li><strong>종이 문서:</strong> 분쇄기로 분쇄하거나 소각을 통하여 파기</li>
+                </ul>
+            </section>
+
+            <!-- 7. 정보주체의 권리·의무 -->
+            <section class="privacy-section">
+                <h2>7. 정보주체의 권리·의무 및 행사방법</h2>
+                
+                <p>이용자는 개인정보주체로서 다음과 같은 권리를 행사할 수 있습니다:</p>
+                
+                <h3>🔹 정보주체의 권리</h3>
+                <ul>
+                    <li>개인정보 처리현황 통지 요구</li>
+                    <li>개인정보 열람 요구</li>
+                    <li>개인정보 정정·삭제 요구</li>
+                    <li>개인정보 처리정지 요구</li>
+                </ul>
+
+                <h3>🔹 권리 행사 방법</h3>
+                <p>
+                    위의 권리 행사는 개인정보보호법 시행규칙 별지 제8호에 따라 작성한 서면, 
+                    전자우편 등을 통하여 하실 수 있으며, 정보허브는 이에 대해 지체없이 조치하겠습니다.
+                </p>
+            </section>
+
+            <!-- 8. 개인정보 보호책임자 -->
+            <section class="privacy-section">
+                <h2>8. 개인정보 보호책임자</h2>
+                
+                <p>
+                    정보허브는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 
+                    개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 
+                    아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+                </p>
+
+                <div class="contact-box">
+                    <h4>📧 개인정보 보호책임자</h4>
+                    <p>
+                        <strong>담당부서:</strong> 정보허브 운영팀<br>
+                        <strong>연락처:</strong> imkyounghun77@gmail.com<br>
+                        <strong>처리시간:</strong> 평일 09:00 ~ 18:00
+                    </p>
+                    <a href="mailto:imkyounghun77@gmail.com" class="contact-link">📧 이메일 보내기</a>
+                </div>
+            </section>
+
+            <!-- 9. 개인정보 처리방침 변경 -->
+            <section class="privacy-section">
+                <h2>9. 개인정보 처리방침 변경</h2>
+                
+                <p>
+                    이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 
+                    삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
+                </p>
+
+                <h3>🔹 개정 이력</h3>
+                <ul>
+                    <li><strong>2025년 8월 7일:</strong> 개인정보처리방침 제정</li>
+                </ul>
+            </section>
+
+            <!-- 10. 개인정보 침해신고 -->
+            <section class="privacy-section">
+                <h2>10. 개인정보 침해신고</h2>
+                
+                <p>
+                    개인정보주체는 아래의 기관에 대해 개인정보 침해신고, 상담 등을 문의하실 수 있습니다.
+                </p>
+
+                <h3>🔹 관련 기관 연락처</h3>
+                <ul>
+                    <li><strong>개인정보 침해신고센터:</strong> (국번없이) 182 / privacy.go.kr</li>
+                    <li><strong>개인정보 분쟁조정위원회:</strong> (국번없이) 1833-6972 / www.kopico.go.kr</li>
+                    <li><strong>대검찰청 사이버범죄수사단:</strong> 1301 / www.spo.go.kr</li>
+                    <li><strong>경찰청 사이버안전국:</strong> 182 / cyberbureau.police.go.kr</li>
+                </ul>
+            </section>
+
+            <!-- 면책 고지 -->
+            <section class="privacy-section">
+                <div class="highlight-box">
+                    <h4>⚠️ 중요 안내사항</h4>
+                    <p>
+                        <strong>본 개인정보처리방침은 정보허브 웹사이트에만 적용됩니다.</strong>
+                    </p>
+                    <p>
+                        다른 웹사이트로 연결되는 링크를 클릭하여 이동하는 경우, 
+                        해당 웹사이트의 개인정보처리방침을 확인하시기 바랍니다.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 정보허브</h3>
+                    <p>
+                        생활에 도움되는 다양한 정보를 
+                        쉽고 이해하기 쉽게 정리하여 
+                        제공하는 정보성 블로그입니다.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🔗 빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="/about.html">블로그 소개</a>
+                        <a href="/contact.html">연락처</a>
+                        <a href="/privacy.html">개인정보처리방침</a>
+                        <a href="/terms.html">이용약관</a>
+                        <a href="/sitemap.xml">사이트맵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📂 주요 카테고리</h3>
+                    <div class="footer-links">
+                        <a href="/category/finance.html">금융정보</a>
+                        <a href="/category/legal.html">법률정보</a>
+                        <a href="/category/housing.html">주거정보</a>
+                        <a href="/category/lifestyle.html">생활정보</a>
+                        <a href="/category/health.html">건강정보</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📞 문의사항</h3>
+                    <p>
+                        정보 관련 문의사항이나 
+                        오류 신고는 연락처 페이지를 
+                        통해 알려주시기 바랍니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 정보허브. 모든 정보는 참고용입니다. | 
+                <a href="/privacy.html">개인정보처리방침</a> | 
+                <a href="/terms.html">이용약관</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // 모바일 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!e.target.closest('nav')) {
+                mobileNav.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
