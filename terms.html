@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타 태그 -->
+    <title>이용약관 - 정보허브</title>
+    <meta name="description" content="정보허브 이용약관입니다. 서비스 이용 시 준수해야 할 규칙과 정책에 대한 안내를 제공합니다.">
+    <meta name="keywords" content="이용약관, 정보허브, 서비스약관, 이용정책">
+    <meta name="author" content="정보허브">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="이용약관 - 정보허브">
+    <meta property="og:description" content="정보허브 서비스 이용약관 및 정책">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khunslab.github.io/terms.html">
+    <meta property="og:image" content="https://khunslab.github.io/assets/og-image.jpg">
+    
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "이용약관",
+        "description": "정보허브 서비스 이용약관 및 정책",
+        "url": "https://khunslab.github.io/terms.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "정보허브",
+            "description": "생활 정보 전문 블로그",
+            "url": "https://khunslab.github.io"
+        }
+    }
+    </script>
+    
+    <!-- 브레드크럼 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://khunslab.github.io"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "이용약관",
+                "item": "https://khunslab.github.io/terms.html"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- 사이트맵 및 RSS -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="정보허브 RSS" href="/feed.xml">
+    
+    <!-- 파비콘 -->
+    <link rel="canonical" href="https://khunslab.github.io/terms.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: #3498db;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* 모바일 햄버거 메뉴 */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #555;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background: #f8f9fa;
+            color: #3498db;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .terms-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .terms-hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .terms-hero p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .update-notice {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .update-notice h3 {
+            color: #2980b9;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .update-notice p {
+            color: #34495e;
+            margin: 0;
+        }
+        
+        .terms-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .terms-section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .terms-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .terms-section h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin: 2rem 0 1rem;
+        }
+        
+        .terms-section h4 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+        
+        .terms-section p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .highlight-box p {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-box strong {
+            color: #6c5400;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .info-box h4 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .info-box p {
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #2980b9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a {
+            color: #95a5a6;
+        }
+        
+        .footer-bottom a:hover {
+            color: #3498db;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .terms-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .terms-section {
+                padding: 2rem;
+            }
+            
+            /* 모바일 네비게이션 */
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .terms-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .terms-section {
+                padding: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">📚 정보허브</a>
+            
+            <!-- 데스크톱 메뉴 -->
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about.html">소개</a></li>
+                <li><a href="/contact.html">연락처</a></li>
+                <li><a href="/privacy.html">개인정보처리방침</a></li>
+            </ul>
+            
+            <!-- 모바일 햄버거 버튼 -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- 모바일 메뉴 -->
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="/">🏠 홈</a></li>
+                    <li><a href="/about.html">📖 소개</a></li>
+                    <li><a href="/contact.html">📞 연락처</a></li>
+                    <li><a href="/privacy.html">🔒 개인정보처리방침</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- 히어로 섹션 -->
+            <section class="terms-hero">
+                <h1>📋 이용약관</h1>
+                <p>정보허브 서비스 이용 시 준수해야 할<br>
+                규칙과 정책에 대해 안내해드립니다.</p>
+            </section>
+
+            <!-- 업데이트 공지 -->
+            <div class="update-notice">
+                <h3>📅 최근 업데이트</h3>
+                <p>본 이용약관은 <strong>2025년 8월 7일</strong>에 최종 업데이트되었습니다.</p>
+            </div>
+
+            <!-- 1. 약관의 목적 및 적용범위 -->
+            <section class="terms-section">
+                <h2>1. 약관의 목적 및 적용범위</h2>
+                
+                <h3>🔹 목적</h3>
+                <p>
+                    본 약관은 정보허브(이하 "서비스")가 제공하는 정보 서비스의 이용과 관련하여 
+                    서비스와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+                </p>
+
+                <h3>🔹 적용범위</h3>
+                <p>
+                    본 약관은 정보허브 웹사이트(https://khunslab.github.io)를 이용하는 모든 이용자에게 적용됩니다.
+                </p>
+
+                <div class="highlight-box">
+                    <h4>📋 중요 안내</h4>
+                    <p>
+                        <strong>정보허브는 현재 회원가입 없이 이용 가능한 정보 제공 서비스입니다.</strong>
+                    </p>
+                    <p>
+                        본 약관은 향후 서비스 확장에 대비한 기본 약관이며, 
+                        현재는 웹사이트 이용 시 자동으로 적용되는 최소한의 규정만 포함되어 있습니다.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. 서비스의 내용 -->
+            <section class="terms-section">
+                <h2>2. 서비스의 내용</h2>
+                
+                <h3>🔹 제공 서비스</h3>
+                <p>
+                    정보허브는 다음과 같은 정보 서비스를 제공합니다:
+                </p>
+                <p>
+                    <strong>금융 정보:</strong> 개인회생, 대출, 보험, 투자 관련 정보<br>
+                    <strong>법률 정보:</strong> 일상생활 관련 법적 절차 및 권리 정보<br>
+                    <strong>주거 정보:</strong> 부동산, 청약, 주택 관련 정보<br>
+                    <strong>생활 정보:</strong> 교육, 취업, 복지 관련 정보<br>
+                    <strong>건강 정보:</strong> 건강보험, 의료 혜택 관련 정보
+                </p>
+
+                <h3>🔹 서비스의 성격</h3>
+                <p>
+                    본 서비스는 정보 제공을 목적으로 하는 블로그 형태의 웹사이트이며, 
+                    개인적인 상담이나 전문적인 조언을 제공하지 않습니다.
+                </p>
+            </section>
+
+            <!-- 3. 이용자의 권리와 의무 -->
+            <section class="terms-section">
+                <h2>3. 이용자의 권리와 의무</h2>
+                
+                <h3>🔹 이용자의 권리</h3>
+                <p>
+                    <strong>정보 접근권:</strong> 공개된 모든 정보에 자유롭게 접근할 수 있습니다<br>
+                    <strong>문의권:</strong> 정보의 정확성이나 서비스 개선에 대해 문의할 수 있습니다<br>
+                    <strong>개인정보보호권:</strong> 개인정보처리방침에 따른 보호를 받을 권리가 있습니다
+                </p>
+
+                <h3>🔹 이용자의 의무</h3>
+                <p>
+                    <strong>정보의 올바른 이용:</strong> 제공된 정보를 합법적 목적으로만 이용해야 합니다<br>
+                    <strong>타인 권리 존중:</strong> 다른 이용자나 제3자의 권리를 침해하지 않아야 합니다<br>
+                    <strong>서비스 보호:</strong> 서비스의 정상적인 운영을 방해하는 행위를 하지 않아야 합니다
+                </p>
+
+                <h4>🚫 금지행위</h4>
+                <p>
+                    <strong>정보의 무단 복제 및 재배포</strong><br>
+                    <strong>상업적 목적의 무단 이용</strong><br>
+                    <strong>허위 정보 유포</strong><br>
+                    <strong>서비스 운영 방해</strong><br>
+                    <strong>타인에 대한 비방이나 욕설</strong>
+                </p>
+            </section>
+
+            <!-- 4. 서비스 제공자의 권리와 의무 -->
+            <section class="terms-section">
+                <h2>4. 서비스 제공자의 권리와 의무</h2>
+                
+                <h3>🔹 서비스 제공자의 권리</h3>
+                <p>
+                    <strong>서비스 변경권:</strong> 필요에 따라 서비스 내용을 변경할 수 있습니다<br>
+                    <strong>이용 제한권:</strong> 약관 위반 시 서비스 이용을 제한할 수 있습니다<br>
+                    <strong>약관 변경권:</strong> 합리적 이유가 있을 때 약관을 변경할 수 있습니다
+                </p>
+
+                <h3>🔹 서비스 제공자의 의무</h3>
+                <p>
+                    <strong>정보의 정확성 노력:</strong> 신뢰할 수 있는 정보 제공을 위해 노력합니다<br>
+                    <strong>개인정보보호:</strong> 이용자의 개인정보를 안전하게 보호합니다<br>
+                    <strong>서비스 안정성:</strong> 안정적인 서비스 제공을 위해 노력합니다
+                </p>
+            </section>
+
+            <!-- 5. 면책조항 -->
+            <section class="terms-section">
+                <h2>5. 면책조항</h2>
+                
+                <div class="highlight-box">
+                    <h4>⚠️ 중요한 면책조항</h4>
+                    <p>
+                        <strong>정보허브에서 제공하는 모든 정보는 일반적인 정보 제공 목적으로만 작성되었습니다.</strong>
+                    </p>
+                </div>
+
+                <h3>🔹 정보의 한계</h3>
+                <p>
+                    <strong>개인 상황의 차이:</strong> 개인의 구체적인 상황에 따라 적용 내용이 달라질 수 있습니다<br>
+                    <strong>정보의 변경:</strong> 법령이나 제도 변경으로 인해 정보가 달라질 수 있습니다<br>
+                    <strong>전문 상담 필요:</strong> 중요한 결정 시에는 반드시 전문가 상담을 받으시기 바랍니다
+                </p>
+
+                <h3>🔹 책임의 제한</h3>
+                <p>
+                    <strong>정보허브는 다음 사항에 대해 책임을 지지 않습니다:</strong>
+                </p>
+                <p>
+                    <strong>정보 이용으로 인한 손실이나 피해</strong><br>
+                    <strong>정보의 정확성, 완전성, 적시성</strong><br>
+                    <strong>서비스 중단으로 인한 불편</strong><br>
+                    <strong>외부 링크 사이트의 내용</strong><br>
+                    <strong>이용자 간 또는 이용자와 제3자 간의 분쟁</strong>
+                </p>
+            </section>
+
+            <!-- 6. 지적재산권 -->
+            <section class="terms-section">
+                <h2>6. 지적재산권</h2>
+                
+                <h3>🔹 저작권</h3>
+                <p>
+                    정보허브에서 제공하는 모든 콘텐츠(텍스트, 이미지, 디자인 등)의 저작권은 
+                    정보허브에 귀속됩니다.
+                </p>
+
+                <h3>🔹 이용 허가 범위</h3>
+                <p>
+                    <strong>개인적 이용:</strong> 개인적, 비상업적 목적으로 열람 및 이용 가능<br>
+                    <strong>부분 인용:</strong> 출처를 명시한 부분적 인용 허용<br>
+                    <strong>금지사항:</strong> 무단 복제, 재배포, 상업적 이용 금지
+                </p>
+            </section>
+
+            <!-- 7. 서비스 변경 및 중단 -->
+            <section class="terms-section">
+                <h2>7. 서비스 변경 및 중단</h2>
+                
+                <h3>🔹 서비스 변경</h3>
+                <p>
+                    정보허브는 서비스 개선이나 기술적 이유로 서비스 내용을 변경할 수 있으며, 
+                    중요한 변경사항은 웹사이트를 통해 공지합니다.
+                </p>
+
+                <h3>🔹 서비스 중단</h3>
+                <p>
+                    다음의 경우 서비스를 일시적으로 중단할 수 있습니다:
+                </p>
+                <p>
+                    <strong>시스템 점검 및 maintenance</strong><br>
+                    <strong>서버 장애 또는 기술적 문제</strong><br>
+                    <strong>기타 운영상 필요한 경우</strong>
+                </p>
+            </section>
+
+            <!-- 8. 약관의 변경 -->
+            <section class="terms-section">
+                <h2>8. 약관의 변경</h2>
+                
+                <p>
+                    본 약관은 필요에 따라 변경될 수 있으며, 약관이 변경되는 경우 
+                    변경사항의 시행 7일 전부터 웹사이트를 통해 공지합니다.
+                </p>
+
+                <h3>🔹 개정 이력</h3>
+                <p>
+                    <strong>2025년 8월 7일:</strong> 이용약관 제정
+                </p>
+
+                <div class="info-box">
+                    <h4>📢 약관 변경 시 안내</h4>
+                    <p>
+                        약관 변경 시에는 웹사이트 메인 페이지에 공지하며, 
+                        변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하시면 됩니다.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 9. 분쟁해결 -->
+            <section class="terms-section">
+                <h2>9. 분쟁해결</h2>
+                
+                <h3>🔹 준거법</h3>
+                <p>
+                    본 약관은 대한민국 법률에 의하여 해석되고 적용됩니다.
+                </p>
+
+                <h3>🔹 관할법원</h3>
+                <p>
+                    서비스와 관련하여 발생한 분쟁은 민사소송법에 따른 관할법원에서 해결합니다.
+                </p>
+
+                <h3>🔹 분쟁 조정</h3>
+                <p>
+                    분쟁 발생 시 우선 당사자 간 협의를 통해 해결하도록 노력하며, 
+                    협의가 어려운 경우 관련 조정기관을 통한 해결을 권장합니다.
+                </p>
+            </section>
+
+            <!-- 10. 문의 및 연락처 -->
+            <section class="terms-section">
+                <h2>10. 문의 및 연락처</h2>
+                
+                <p>
+                    본 약관과 관련하여 문의사항이 있으시면 아래 연락처로 연락주시기 바랍니다.
+                </p>
+
+                <div class="info-box">
+                    <h4>📧 연락처 정보</h4>
+                    <p>
+                        <strong>이메일:</strong> imkyounghun77@gmail.com<br>
+                        <strong>운영시간:</strong> 평일 09:00 ~ 18:00<br>
+                        <strong>응답시간:</strong> 평일 24시간 이내, 주말 48시간 이내
+                    </p>
+                    <a href="mailto:imkyounghun77@gmail.com" class="contact-link">📧 이메일 보내기</a>
+                </div>
+
+                <h3>🔹 기타 문의사항</h3>
+                <p>
+                    약관 해석, 서비스 이용 관련 문의, 개선 제안 등 
+                    모든 문의사항을 언제든지 연락주시기 바랍니다.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 정보허브</h3>
+                    <p>
+                        생활에 도움되는 다양한 정보를 
+                        쉽고 이해하기 쉽게 정리하여 
+                        제공하는 정보성 블로그입니다.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🔗 빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="/about.html">블로그 소개</a>
+                        <a href="/contact.html">연락처</a>
+                        <a href="/privacy.html">개인정보처리방침</a>
+                        <a href="/terms.html">이용약관</a>
+                        <a href="/sitemap.xml">사이트맵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📂 주요 카테고리</h3>
+                    <div class="footer-links">
+                        <a href="/category/finance.html">금융정보</a>
+                        <a href="/category/legal.html">법률정보</a>
+                        <a href="/category/housing.html">주거정보</a>
+                        <a href="/category/lifestyle.html">생활정보</a>
+                        <a href="/category/health.html">건강정보</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📞 문의사항</h3>
+                    <p>
+                        정보 관련 문의사항이나 
+                        오류 신고는 연락처 페이지를 
+                        통해 알려주시기 바랍니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 정보허브. 모든 정보는 참고용입니다. | 
+                <a href="/privacy.html">개인정보처리방침</a> | 
+                <a href="/terms.html">이용약관</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // 모바일 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!e.target.closest('nav')) {
+                mobileNav.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
